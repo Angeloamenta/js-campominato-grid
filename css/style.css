@@ -70,6 +70,9 @@ main {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -78,6 +81,9 @@ main {
     width: calc(100% / 9);
     height: calc(100% / 9);
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .square-49 {
@@ -85,4 +91,7 @@ main {
     width: calc(100% / 7);
     height: calc(100% / 7);
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -40,26 +40,30 @@ button.addEventListener("click", function() {
     const easy = document.querySelector(".easy").value;
     const medium = document.querySelector(".medium").value;
     const hard = document.querySelector(".hard").value;
-
+    const numberInside = 0;
     const difficulty = document.getElementById("difficulty").value;
     
     if (difficulty == "easy") {
-        for (let i = 0; i < number100; i++) {
+        for (let i = 1; i < number100 +1; i++) {
             const square100 = document.createElement("div");
             square100.classList.add("square-100");
-            containerGrid.append(square100);    
+            containerGrid.append(square100);
+            square100.append(i);
+
         } 
     } else if (difficulty == "medium") {
-        for (let i = 0; i < number81; i++) {
+        for (let i = 1; i < number81 +1; i++) {
             const square81 = document.createElement("div");
             square81.classList.add("square-81");
-            containerGrid.append(square81);    
+            containerGrid.append(square81);
+            square81.append(i);   
         } 
     } else  {
-        for (let i = 0; i < number49; i++) {
+        for (let i = 1; i < number49 +1; i++) {
             const square49 = document.createElement("div");
             square49.classList.add("square-49");
-            containerGrid.append(square49);    
+            containerGrid.append(square49);
+            square49.append(i);    
         } 
     }
 });
