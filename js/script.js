@@ -26,10 +26,15 @@
 // console.log(headerDx);
 // header.append(headerSx, headerDx);
 
-
+const number100 = 100;
+const number81 = 81;
+const number49 = 49;
+console.log(number100);
 const button = document.querySelector(".button-play");
 console.log(button);
 
+const containerGrid = document.querySelector(".container-grid");
+console.log(containerGrid);
 
 button.addEventListener("click", function() {
     const easy = document.querySelector(".easy").value;
@@ -38,8 +43,23 @@ button.addEventListener("click", function() {
 
     const difficulty = document.getElementById("difficulty").value;
     
-    if (difficulty == "medium") {
-        alert("pippo");
+    if (difficulty == "easy") {
+        for (let i = 0; i < number100; i++) {
+            const square100 = document.createElement("div");
+            square100.classList.add("square-100");
+            containerGrid.append(square100);    
+        } 
+    } else if (difficulty == "medium") {
+        for (let i = 0; i < number81; i++) {
+            const square81 = document.createElement("div");
+            square81.classList.add("square-81");
+            containerGrid.append(square81);    
+        } 
+    } else  {
+        for (let i = 0; i < number49; i++) {
+            const square49 = document.createElement("div");
+            square49.classList.add("square-49");
+            containerGrid.append(square49);    
+        } 
     }
-
 });
