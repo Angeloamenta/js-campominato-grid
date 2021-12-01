@@ -74,6 +74,12 @@ main {
 
 }
 
+
+.title-grid {
+text-align: center;
+align-self: center;
+}
+
 .square-100 {
     display: flex;
     width: calc(100% / 10);
@@ -103,4 +109,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.none {
+    display: none;
 }

@@ -64,6 +64,12 @@ const containerGrid = document.createElement("div");
 containerGrid.classList.add("container-grid")
 main.append(containerGrid);
 
+containerGrid.innerHTML = `<div class="title-grid">
+<h1>Benvenuto su Campo Minato:</h1>
+<h3> seleziona la tua difficoltà </h3>
+</div>`
+let titleGrid = document.querySelector(".title-grid");
+console.log(titleGrid);
 
 headerSx.innerHTML = titleSx;
 
@@ -92,14 +98,17 @@ buttons.addEventListener("click", function() {
     if (difficulty == "easy") {
         for (let i = 1; i < number100 +1; i++) {
             // creo un numero di elementi che ho indicato con le costanti create sopra rispettivamente di 100, 81 e 49 a cui aggiungo la classe adatta creata con il css e li "appendo". tutto cio con ogni value a mia disposizione
+            titleGrid.classList.add("none");
             const square100 = document.createElement("div");
             square100.classList.add("square-100");
             containerGrid.append(square100);
             square100.append(i);
 
+
         } 
     } else if (difficulty == "medium") {
         for (let i = 1; i < number81 +1; i++) {
+            titleGrid.classList.add("none");
             const square81 = document.createElement("div");
             square81.classList.add("square-81");
             containerGrid.append(square81);
@@ -107,6 +116,7 @@ buttons.addEventListener("click", function() {
         } 
     } else  {
         for (let i = 1; i < number49 +1; i++) {
+            titleGrid.classList.add("none");
             const square49 = document.createElement("div");
             square49.classList.add("square-49");
             containerGrid.append(square49);
