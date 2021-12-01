@@ -53,7 +53,7 @@ let buttons = document.createElement("button");
 buttons.classList.add("button-play");
 // ho aggiunto innerHtml con "play" sul bottone perch altrimenti il bottone risultava vuoto
 buttons.innerHTML = "Play";
-headerDx.append(buttons);
+inputMood.append(buttons);
 
 // ricreo il main
 const main = document.createElement("main");
