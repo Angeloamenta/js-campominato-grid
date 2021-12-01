@@ -33,7 +33,35 @@ let titleSx =
 <h1>Campo Minato: la griglia</h1>
 `;
 
+// adesso devo ricreare la parte destra come fatto per l'header
+const inputMood = document.createElement("div");
+inputMood.classList.add("input-mood");
+console.log(inputMood);
+const contentDx = 
+`
+<label for="difficulty">Difficoltà:</label>
+<select id="difficulty">
+    <option class="easy" value="easy">Easy</option>
+    <option class="medium" value="medium">Medium</option>
+    <option class="hard" value="hard">Hard</option>
+</select>
+`;
+headerDx.append(inputMood);
+inputMood.innerHTML = contentDx
 
+let buttons = document.createElement("button");
+buttons.classList.add("button-play");
+buttons.innerHTML = "Play";
+headerDx.append(buttons);
+
+// ricreo il main
+const main = document.createElement("main");
+container.append(main);
+
+// creo il container grid 
+const containerGrid = document.createElement("div");
+containerGrid.classList.add("container-grid")
+main.append(containerGrid);
 
 
 headerSx.innerHTML = titleSx;
@@ -43,13 +71,13 @@ const number100 = 100;
 const number81 = 81;
 const number49 = 49;
 console.log(number100);
-const button = document.querySelector(".button-play");
-console.log(button);
+// const button = document.querySelector(".button-play");
 
-const containerGrid = document.querySelector(".container-grid");
-console.log(containerGrid);
 
-button.addEventListener("click", function() {
+// const containerGrid = document.querySelector(".container-grid");
+// console.log(containerGrid);
+
+buttons.addEventListener("click", function() {
     const easy = document.querySelector(".easy").value;
     const medium = document.querySelector(".medium").value;
     const hard = document.querySelector(".hard").value;
