@@ -51,6 +51,7 @@ inputMood.innerHTML = contentDx
 
 let buttons = document.createElement("button");
 buttons.classList.add("button-play");
+// ho aggiunto innerHtml con "play" sul bottone perch altrimenti il bottone risultava vuoto
 buttons.innerHTML = "Play";
 headerDx.append(buttons);
 
