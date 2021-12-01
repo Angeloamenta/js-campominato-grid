@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: lightgray; */
+}
+
+.header {
+    width: 100%;
+    height: 90px;
+    /* background-color: lightsalmon; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-sx,
+.header-dx {
+    width: 50%;
+    height: 100%;
+}
+
+.header-sx {
+    /* background-color: lime; */
+    display: flex;
+    align-items: center;
+}
+
+.header-dx {
+    /* background-color:magenta; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.input-mood {
+    padding-right: 15px;
+}
+
+#difficulty {
+    width: 140px;
+}
+.button-play {
+    width: 80px;
+}
+
+
+.container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding:60px 0;
+    background-color: #7FFFD4;
+
+}
