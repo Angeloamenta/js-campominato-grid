@@ -54,7 +54,7 @@
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
-    border: 2px solid black;
+    /* border: 1px solid black; */
 }
 
 main {
@@ -63,4 +63,26 @@ main {
     padding:60px 0;
     background-color: #7FFFD4;
 
+}
+
+.square-100 {
+    display: flex;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid black;
+}
+
+
+.square-81 {
+    display: flex;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 2px solid black;
+}
+
+.square-49 {
+    display: flex;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 2px solid black;
 }
