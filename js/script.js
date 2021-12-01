@@ -65,7 +65,7 @@ containerGrid.classList.add("container-grid")
 main.append(containerGrid);
 
 containerGrid.innerHTML = `<div class="title-grid">
-<h1>Benvenuto su Campo Minato:</h1>
+<h1>Benvenuti su Campo Minato:</h1>
 <h3> seleziona la tua difficoltà </h3>
 </div>`
 let titleGrid = document.querySelector(".title-grid");
