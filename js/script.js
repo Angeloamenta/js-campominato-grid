@@ -8,23 +8,36 @@
 // // creo gli elementi che mi serviranno e li inserisco sull'html
 
 // // seleziono il container
-// const container = document.querySelector(".container");
-// console.log(container);
+const container = document.querySelector(".container");
+console.log(container);
 // // creo header
-// const header = document.createElement("header");
+ const header = document.createElement("header");
 // // gli aggiungo la classe adatta
-// header.classList.add("header");
-// console.log(header);
+ header.classList.add("header");
+ console.log(header);
 // // lo metto dentro il mio container
-// container.append(header);
+container.append(header);
 // // creo header dx e sx
-// const headerSx = document.createElement("div");
-// headerSx.classList.add("header-sx");
-// console.log(headerSx);
-// const headerDx = document.createElement("div");
-// headerDx.classList.add("header-dx");
-// console.log(headerDx);
-// header.append(headerSx, headerDx);
+ const headerSx = document.createElement("div");
+headerSx.classList.add("header-sx");
+console.log(headerSx);
+ const headerDx = document.createElement("div");
+ headerDx.classList.add("header-dx");
+ console.log(headerDx);
+header.append(headerSx, headerDx);
+
+// ricreo contenuto della parte sinistra con ``
+let titleSx = 
+`
+<img src="https://yt3.ggpht.com/ytc/AKedOLTO2XVhtyMr24Dnz6QJ-Lsj_05XHim-qMoF6PRc=s176-c-k-c0x00ffffff-no-rj" alt="">
+<h1>Campo Minato: la griglia</h1>
+`;
+
+
+
+
+headerSx.innerHTML = titleSx;
+
 
 const number100 = 100;
 const number81 = 81;

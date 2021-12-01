@@ -30,12 +30,17 @@
     align-items: center;
 }
 
+.header-sx img {
+    width: 80px;
+}
+
 .header-dx {
     /* background-color:magenta; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
+
 
 .input-mood {
     padding-right: 15px;
