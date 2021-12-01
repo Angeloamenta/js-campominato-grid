@@ -77,15 +77,20 @@ console.log(number100);
 // const containerGrid = document.querySelector(".container-grid");
 // console.log(containerGrid);
 
+// creo un evento legato al bottone 
 buttons.addEventListener("click", function() {
+
+    // creo delle costanti legate al value delle mie option in modo da richiamarlo nell if a seguire
     const easy = document.querySelector(".easy").value;
     const medium = document.querySelector(".medium").value;
     const hard = document.querySelector(".hard").value;
-    const numberInside = 0;
+    // costante del mio label in modo da poter fare la differenza con il value delle altre costanti
     const difficulty = document.getElementById("difficulty").value;
     
+    // se il value (che ho aggiunto nella const difficulty.value e == ad easy faccio questo)
     if (difficulty == "easy") {
         for (let i = 1; i < number100 +1; i++) {
+            // creo un numero di elementi che ho indicato con le costanti create sopra rispettivamente di 100, 81 e 49 a cui aggiungo la classe adatta creata con il css e li "appendo". tutto cio con ogni value a mia disposizione
             const square100 = document.createElement("div");
             square100.classList.add("square-100");
             containerGrid.append(square100);
