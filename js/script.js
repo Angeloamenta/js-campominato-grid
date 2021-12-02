@@ -144,13 +144,6 @@ buttons.addEventListener("click", function() {
                     containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> </div>`;
 
                 }
-
-                for (let i = 0; i < whiteList.length; i++) {
-                    if (whitheList.length = 5) {
-                        alert("hai vinto");
-                    }
-                    
-                }
                 
             })
         } 
