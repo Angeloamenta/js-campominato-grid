@@ -79,14 +79,14 @@ const number81 = 81;
 const number49 = 49;
 console.log(number100);
 // const button = document.querySelector(".button-play");
-
+let whiteList = [];
 
 // const containerGrid = document.querySelector(".container-grid");
 // console.log(containerGrid);
 
 // creo un evento legato al bottone 
 buttons.addEventListener("click", function() {
-
+    containerGrid.innerHTML = "";
     // creo delle costanti legate al value delle mie option in modo da richiamarlo nell if a seguire
     const easy = document.querySelector(".easy").value;
     const medium = document.querySelector(".medium").value;
@@ -102,17 +102,57 @@ buttons.addEventListener("click", function() {
             const square100 = document.createElement("div");
             square100.classList.add("square-100");
             containerGrid.append(square100);
-            square100.append(i);
+            let random100 = Math.floor(Math.random() * number100) + 1;
+            square100.append(random100);
+            
+            // se la casella contiene un numero pari
+            square100.addEventListener("click", function () {
+                if (random100 % 2 == 0) {
+                    square100.classList.add("color")
+                    whiteList.push(random100);
+                    console.log(whiteList);
+                }else {
+                    // se dispari
+                    square100.classList.add("lose")
+                    alert("hai perso");
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> </div>`;
 
-
+                }
+                
+            })
+            
         } 
+        
     } else if (difficulty == "medium") {
         for (let i = 1; i < number81 +1; i++) {
             titleGrid.classList.add("none");
             const square81 = document.createElement("div");
             square81.classList.add("square-81");
             containerGrid.append(square81);
-            square81.append(i);   
+            let random81 = Math.floor(Math.random() * number81) + 1;
+            square81.append(random81);
+
+            square81.addEventListener("click", function () {
+                if (random81 % 2 == 0) {
+                    square81.classList.add("color")
+                    whiteList.push(random81);
+                    console.log(whiteList);
+                }else {
+                    // se dispari
+                    square81.classList.add("lose")
+                    alert("hai perso");
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> </div>`;
+
+                }
+
+                for (let i = 0; i < whiteList.length; i++) {
+                    if (whitheList.length = 5) {
+                        alert("hai vinto");
+                    }
+                    
+                }
+                
+            })
         } 
     } else  {
         for (let i = 1; i < number49 +1; i++) {
@@ -120,7 +160,23 @@ buttons.addEventListener("click", function() {
             const square49 = document.createElement("div");
             square49.classList.add("square-49");
             containerGrid.append(square49);
-            square49.append(i);    
-        } 
+            let random49 = Math.floor(Math.random() * number49) + 1;
+            square49.append(random49); 
+
+            square49.addEventListener("click", function () {
+                if (random49 % 2 == 0) {
+                    square49.classList.add("color")
+                    whiteList.push(random49);
+                    console.log(whiteList);
+                }else {
+                    // se dispari
+                    square49.classList.add("lose")
+                    alert("hai perso");
+                    containerGrid.innerHTML = `<div class="title-grid"><h1>Hai perso! Premi play e riprova</h1> </div>`;
+
+                }
+            })
+        }
     }
-});
+
+ });

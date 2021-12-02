@@ -114,3 +114,17 @@ align-self: center;
 .none {
     display: none;
 }
+
+.color {
+    background-color: chartreuse;
+}
+
+.lose {
+    background-color: red;
+}
+
+.square-100 > *,
+.square-49 > *,
+.square-81 > * {
+    display: none;
+}
